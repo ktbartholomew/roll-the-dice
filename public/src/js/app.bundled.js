@@ -95178,13 +95178,24 @@ angular.module(module.exports, [])
           animate();  
         }
 
-        var tween = new TWEEN.Tween($scope.dice.rotation)
+
+        new TWEEN.Tween($scope.dice.rotation)
+        .to({
+          x: 2 * Math.PI,
+          y: 2 * Math.PI,
+          z: 2 * Math.PI
+        }, 500)
+        .easing(TWEEN.Easing.Cubic.In)
+        .start();
+
+        new TWEEN.Tween($scope.dice.rotation)
         .to({
           x: side.x * (Math.PI/180),
           y: side.y * (Math.PI/180),
           z: side.z * (Math.PI/180)
-        }, 1000)
-        .easing(TWEEN.Easing.Cubic.InOut)
+        }, 500)
+        .delay(500)
+        .easing(TWEEN.Easing.Cubic.Out)
         .onComplete(function () {
           $scope.animating = false;
         })
