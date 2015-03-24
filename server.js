@@ -3,7 +3,7 @@
 
   var express = require('express');
   var Q = require('q');
-  var redis = require('app/stores/redis');
+  var redis = require('./app/stores/redis');
   var app = express();
   var server = require('http').Server(app);
   var io = require('socket.io')(server);
