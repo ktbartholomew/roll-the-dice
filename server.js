@@ -33,5 +33,5 @@
 
   app.use('/api/groups', require('./app/routes/groups/index'));
 
-  server.listen(3000);
+  server.listen(process.env.PORT || 3000);
 })();

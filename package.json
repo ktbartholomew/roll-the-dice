@@ -25,6 +25,9 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^2.4.0"
   },
+  "scripts": {
+    "start": "browserify public/src/js/app.js -o public/src/js/app.bundled.js -t browserify-shim; node server.js"
+  },
   "devDependencies": {},
   "browser": {
     "ngStorage": "node_modules/ng-storage/ngStorage.js"
