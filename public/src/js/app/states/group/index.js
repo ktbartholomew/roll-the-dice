@@ -4,7 +4,7 @@ var _ = require('lodash');
 module.exports = 'app.states.group';
 
 angular.module(module.exports, [
-  require('../../directives/dice-model')
+  require('../../directives/dice-model/dice-model')
 ])
 .controller('GroupCtrl', function ($localStorage, roller, $scope, $stateParams) {
   var _ = require('lodash');
@@ -15,7 +15,7 @@ angular.module(module.exports, [
   $scope.member = {clientId: $scope.clientId};
   $scope.diceToRoll = [];
   $scope.rollValues = [];
-  $scope.diceColor = '#cc0000';
+  $scope.diceColor = $localStorage.diceColor || '#cc0000';
 
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {
@@ -34,6 +34,7 @@ angular.module(module.exports, [
       groupId: $stateParams.groupId,
       clientId: $localStorage.clientId,
       clientName: $localStorage.clientName,
+      diceColor: $localStorage.diceColor
     });
   };
 
@@ -55,6 +56,14 @@ angular.module(module.exports, [
   $scope.removeAllDice = function (index) {
     $scope.diceToRoll = [];
   };
+
+  $scope.$watch('diceColor', function (newValue, oldValue) {
+    if (typeof newValue === 'undefined') {
+      return;
+    }
+    $localStorage.diceColor = newValue;
+    joinGroup();
+  });
 
   $scope.roll = function () {
     $scope.rollValues = [];

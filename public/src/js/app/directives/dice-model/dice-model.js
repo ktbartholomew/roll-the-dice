@@ -3,10 +3,10 @@ require('angular');
 var THREE = require('three');
 var TWEEN = require('tween.js');
 
-require('./dice-model/d4');
-require('./dice-model/d6');
-require('./dice-model/d8');
-require('./dice-model/d20');
+require('./d4');
+require('./d6');
+require('./d8');
+require('./d20');
 
 module.exports = 'app.directives.dice-model';
 
@@ -30,16 +30,16 @@ angular.module(module.exports, [])
       };
 
       var addLights = function () {
-        var light = new THREE.PointLight(0x808080, 3);
+        var light = new THREE.PointLight(0x404040, 3);
         light.position.set(0,1,5);
         $scope.scene.add(light);
-        $scope.scene.add(new THREE.AmbientLight(0x404040));
+        $scope.scene.add(new THREE.AmbientLight(0x202020));
       };
 
       var addModel = function () {
         $scope.scene.remove($scope.dice);
 
-        $scope.model = require('./dice-model/d' + $scope.diceModel);
+        $scope.model = require('./d' + $scope.diceModel);
         $scope.dice = $scope.model.createMesh(stringToHex($scope.color));
         $scope.scene.add($scope.dice);
 
@@ -85,7 +85,7 @@ angular.module(module.exports, [])
 
       $scope.scene = new THREE.Scene();
       $scope.renderer = new THREE.WebGLRenderer({alpha: true});
-      $scope.renderer.setSize(240, 240);
+      $scope.renderer.setSize(180, 180);
 
       
       addCamera();

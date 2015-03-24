@@ -39,7 +39,7 @@
           </a>
         </span> <br>
         <span data-ng-repeat="roll in member.rolls track by $index">
-          <div data-dice-model data-color="diceColor" data-model="roll.die" data-value="roll.value"></div>
+          <div data-dice-model data-color="member.diceColor" data-model="roll.die" data-value="roll.value"></div>
         </span>
       </li>
     </ul>

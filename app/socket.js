@@ -28,13 +28,15 @@ module.exports = function (io) {
           var memberIndex = _.findIndex(this.groups[this.groupIndex].members, {clientId: data.clientId});
           this.groups[this.groupIndex].members[memberIndex].clientId = data.clientId;
           this.groups[this.groupIndex].members[memberIndex].clientName = data.clientName;
+          this.groups[this.groupIndex].members[memberIndex].diceColor = data.diceColor;
 
           return this;
         }
 
         var newMember = {
           clientId: data.clientId,
-          clientName: data.clientName
+          clientName: data.clientName,
+          diceColor: '#cc0000'
         };
 
         this.groups[groupIndex].members.push(newMember);

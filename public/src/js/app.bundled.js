@@ -1,4 +1,6 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"./public/src/js/app.js":[function(require,module,exports){
+require('./bootstrap').init();
+},{"./bootstrap":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/bootstrap.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular-resource/angular-resource.js":[function(require,module,exports){
 /**
  * @license AngularJS v1.3.15
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -668,11 +670,11 @@ angular.module('ngResource', ['ng']).
 
 })(window, window.angular);
 
-},{}],2:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular-resource/index.js":[function(require,module,exports){
 require('./angular-resource');
 module.exports = 'ngResource';
 
-},{"./angular-resource":1}],3:[function(require,module,exports){
+},{"./angular-resource":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular-resource/angular-resource.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular-ui-router/release/angular-ui-router.js":[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.13
@@ -4905,7 +4907,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],4:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/angular.js":[function(require,module,exports){
 /**
  * @license AngularJS v1.3.15
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -31215,11 +31217,11 @@ var minlengthDirective = function() {
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}</style>');
-},{}],5:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js":[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":4}],6:[function(require,module,exports){
+},{"./angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/angular.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.3
  * http://jquery.com/
@@ -40426,7 +40428,7 @@ return jQuery;
 
 }));
 
-},{}],7:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/lodash/index.js":[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -52029,7 +52031,7 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],8:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/ng-storage/ngStorage.js":[function(require,module,exports){
 'use strict';
 
 (function() {
@@ -52136,7 +52138,7 @@ return jQuery;
 
 })();
 
-},{}],9:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/node-uuid/uuid.js":[function(require,module,exports){
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -52385,11 +52387,11 @@ return jQuery;
   }
 }).call(this);
 
-},{}],10:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/index.js":[function(require,module,exports){
 
 module.exports = require('./lib/');
 
-},{"./lib/":11}],11:[function(require,module,exports){
+},{"./lib/":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/index.js":[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -52478,7 +52480,7 @@ exports.connect = lookup;
 exports.Manager = require('./manager');
 exports.Socket = require('./socket');
 
-},{"./manager":12,"./socket":14,"./url":15,"debug":19,"socket.io-parser":55}],12:[function(require,module,exports){
+},{"./manager":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/manager.js","./socket":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/socket.js","./url":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/url.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/debug/debug.js","socket.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/manager.js":[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -52983,7 +52985,7 @@ Manager.prototype.onreconnect = function(){
   this.emitAll('reconnect', attempt);
 };
 
-},{"./on":13,"./socket":14,"./url":15,"backo2":16,"component-bind":17,"component-emitter":18,"debug":19,"engine.io-client":20,"indexof":51,"object-component":52,"socket.io-parser":55}],13:[function(require,module,exports){
+},{"./on":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/on.js","./socket":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/socket.js","./url":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/url.js","backo2":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/backo2/index.js","component-bind":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-bind/index.js","component-emitter":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/debug/debug.js","engine.io-client":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/index.js","indexof":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/indexof/index.js","object-component":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/object-component/index.js","socket.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/on.js":[function(require,module,exports){
 
 /**
  * Module exports.
@@ -53009,7 +53011,7 @@ function on(obj, ev, fn) {
   };
 }
 
-},{}],14:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/socket.js":[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -53396,7 +53398,7 @@ Socket.prototype.disconnect = function(){
   return this;
 };
 
-},{"./on":13,"component-bind":17,"component-emitter":18,"debug":19,"has-binary":49,"socket.io-parser":55,"to-array":59}],15:[function(require,module,exports){
+},{"./on":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/on.js","component-bind":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-bind/index.js","component-emitter":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/debug/debug.js","has-binary":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/has-binary/index.js","socket.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/index.js","to-array":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/to-array/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/lib/url.js":[function(require,module,exports){
 (function (global){
 
 /**
@@ -53473,7 +53475,7 @@ function url(uri, loc){
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"debug":19,"parseuri":53}],16:[function(require,module,exports){
+},{"debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/debug/debug.js","parseuri":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/parseuri/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/backo2/index.js":[function(require,module,exports){
 
 /**
  * Expose `Backoff`.
@@ -53560,7 +53562,7 @@ Backoff.prototype.setJitter = function(jitter){
 };
 
 
-},{}],17:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-bind/index.js":[function(require,module,exports){
 /**
  * Slice reference.
  */
@@ -53585,7 +53587,7 @@ module.exports = function(obj, fn){
   }
 };
 
-},{}],18:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js":[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -53751,7 +53753,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],19:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/debug/debug.js":[function(require,module,exports){
 
 /**
  * Expose `debug()` as the module.
@@ -53890,11 +53892,11 @@ try {
   if (window.localStorage) debug.enable(localStorage.debug);
 } catch(e){}
 
-},{}],20:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/index.js":[function(require,module,exports){
 
 module.exports =  require('./lib/');
 
-},{"./lib/":21}],21:[function(require,module,exports){
+},{"./lib/":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/index.js":[function(require,module,exports){
 
 module.exports = require('./socket');
 
@@ -53906,7 +53908,7 @@ module.exports = require('./socket');
  */
 module.exports.parser = require('engine.io-parser');
 
-},{"./socket":22,"engine.io-parser":34}],22:[function(require,module,exports){
+},{"./socket":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/socket.js","engine.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/browser.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/socket.js":[function(require,module,exports){
 (function (global){
 /**
  * Module dependencies.
@@ -54615,7 +54617,7 @@ Socket.prototype.filterUpgrades = function (upgrades) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./transport":23,"./transports":24,"component-emitter":18,"debug":31,"engine.io-parser":34,"indexof":51,"parsejson":45,"parseqs":46,"parseuri":47}],23:[function(require,module,exports){
+},{"./transport":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transport.js","./transports":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/index.js","component-emitter":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/browser.js","engine.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/browser.js","indexof":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/indexof/index.js","parsejson":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/index.js","parseqs":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/index.js","parseuri":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseuri/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transport.js":[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -54776,7 +54778,7 @@ Transport.prototype.onClose = function () {
   this.emit('close');
 };
 
-},{"component-emitter":18,"engine.io-parser":34}],24:[function(require,module,exports){
+},{"component-emitter":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js","engine.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/browser.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/index.js":[function(require,module,exports){
 (function (global){
 /**
  * Module dependencies
@@ -54833,7 +54835,7 @@ function polling(opts){
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./polling-jsonp":25,"./polling-xhr":26,"./websocket":28,"xmlhttprequest":29}],25:[function(require,module,exports){
+},{"./polling-jsonp":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling-jsonp.js","./polling-xhr":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling-xhr.js","./websocket":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/websocket.js","xmlhttprequest":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/xmlhttprequest.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling-jsonp.js":[function(require,module,exports){
 (function (global){
 
 /**
@@ -55070,7 +55072,7 @@ JSONPPolling.prototype.doWrite = function (data, fn) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./polling":27,"component-inherit":30}],26:[function(require,module,exports){
+},{"./polling":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling.js","component-inherit":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/component-inherit/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling-xhr.js":[function(require,module,exports){
 (function (global){
 /**
  * Module requirements.
@@ -55458,7 +55460,7 @@ function unloadHandler() {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./polling":27,"component-emitter":18,"component-inherit":30,"debug":31,"xmlhttprequest":29}],27:[function(require,module,exports){
+},{"./polling":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling.js","component-emitter":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js","component-inherit":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/component-inherit/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/browser.js","xmlhttprequest":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/xmlhttprequest.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling.js":[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -55705,7 +55707,7 @@ Polling.prototype.uri = function(){
   return schema + '://' + this.hostname + port + this.path + query;
 };
 
-},{"../transport":23,"component-inherit":30,"debug":31,"engine.io-parser":34,"parseqs":46,"xmlhttprequest":29}],28:[function(require,module,exports){
+},{"../transport":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transport.js","component-inherit":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/component-inherit/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/browser.js","engine.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/browser.js","parseqs":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/index.js","xmlhttprequest":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/xmlhttprequest.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/websocket.js":[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -55945,7 +55947,7 @@ WS.prototype.check = function(){
   return !!WebSocket && !('__initialize' in WebSocket && this.name === WS.prototype.name);
 };
 
-},{"../transport":23,"component-inherit":30,"debug":31,"engine.io-parser":34,"parseqs":46,"ws":48}],29:[function(require,module,exports){
+},{"../transport":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/transport.js","component-inherit":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/component-inherit/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/browser.js","engine.io-parser":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/browser.js","parseqs":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/index.js","ws":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/lib/browser.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/lib/xmlhttprequest.js":[function(require,module,exports){
 // browser shim for xmlhttprequest module
 var hasCORS = require('has-cors');
 
@@ -55983,7 +55985,7 @@ module.exports = function(opts) {
   }
 }
 
-},{"has-cors":43}],30:[function(require,module,exports){
+},{"has-cors":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/component-inherit/index.js":[function(require,module,exports){
 
 module.exports = function(a, b){
   var fn = function(){};
@@ -55991,7 +55993,7 @@ module.exports = function(a, b){
   a.prototype = new fn;
   a.prototype.constructor = a;
 };
-},{}],31:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/browser.js":[function(require,module,exports){
 
 /**
  * This is the web browser implementation of `debug()`.
@@ -56140,7 +56142,7 @@ function load() {
 
 exports.enable(load());
 
-},{"./debug":32}],32:[function(require,module,exports){
+},{"./debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/debug.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/debug.js":[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -56339,7 +56341,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":33}],33:[function(require,module,exports){
+},{"ms":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/node_modules/ms/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/node_modules/ms/index.js":[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -56452,7 +56454,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],34:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/browser.js":[function(require,module,exports){
 (function (global){
 /**
  * Module dependencies.
@@ -57050,7 +57052,7 @@ exports.decodePayloadAsBinary = function (data, binaryType, callback) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./keys":35,"after":36,"arraybuffer.slice":37,"base64-arraybuffer":38,"blob":39,"has-binary":40,"utf8":42}],35:[function(require,module,exports){
+},{"./keys":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/keys.js","after":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/index.js","arraybuffer.slice":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/index.js","base64-arraybuffer":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/lib/base64-arraybuffer.js","blob":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/index.js","has-binary":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/has-binary/index.js","utf8":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/utf8.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/lib/keys.js":[function(require,module,exports){
 
 /**
  * Gets the keys for an object.
@@ -57071,7 +57073,7 @@ module.exports = Object.keys || function keys (obj){
   return arr;
 };
 
-},{}],36:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/index.js":[function(require,module,exports){
 module.exports = after
 
 function after(count, callback, err_cb) {
@@ -57101,7 +57103,7 @@ function after(count, callback, err_cb) {
 
 function noop() {}
 
-},{}],37:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/index.js":[function(require,module,exports){
 /**
  * An abstraction for slicing an arraybuffer even when
  * ArrayBuffer.prototype.slice is not supported
@@ -57132,7 +57134,7 @@ module.exports = function(arraybuffer, start, end) {
   return result.buffer;
 };
 
-},{}],38:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/lib/base64-arraybuffer.js":[function(require,module,exports){
 /*
  * base64-arraybuffer
  * https://github.com/niklasvh/base64-arraybuffer
@@ -57193,7 +57195,7 @@ module.exports = function(arraybuffer, start, end) {
   };
 })("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/");
 
-},{}],39:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/index.js":[function(require,module,exports){
 (function (global){
 /**
  * Create a blob builder even when vendor prefixes exist
@@ -57246,7 +57248,7 @@ module.exports = (function() {
 })();
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],40:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/has-binary/index.js":[function(require,module,exports){
 (function (global){
 
 /*
@@ -57308,12 +57310,12 @@ function hasBinary(data) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"isarray":41}],41:[function(require,module,exports){
+},{"isarray":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/has-binary/node_modules/isarray/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/has-binary/node_modules/isarray/index.js":[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],42:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/utf8.js":[function(require,module,exports){
 (function (global){
 /*! http://mths.be/utf8js v2.0.0 by @mathias */
 ;(function(root) {
@@ -57556,7 +57558,7 @@ module.exports = Array.isArray || function (arr) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],43:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/index.js":[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -57581,7 +57583,7 @@ try {
   module.exports = false;
 }
 
-},{"global":44}],44:[function(require,module,exports){
+},{"global":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/index.js":[function(require,module,exports){
 
 /**
  * Returns `this`. Execute this without a "context" (i.e. without it being
@@ -57591,7 +57593,7 @@ try {
 
 module.exports = (function () { return this; })();
 
-},{}],45:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/index.js":[function(require,module,exports){
 (function (global){
 /**
  * JSON parse.
@@ -57626,7 +57628,7 @@ module.exports = function parsejson(data) {
   }
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],46:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/index.js":[function(require,module,exports){
 /**
  * Compiles a querystring
  * Returns string representation of the object
@@ -57665,7 +57667,7 @@ exports.decode = function(qs){
   return qry;
 };
 
-},{}],47:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseuri/index.js":[function(require,module,exports){
 /**
  * Parses an URI
  *
@@ -57706,7 +57708,7 @@ module.exports = function parseuri(str) {
     return uri;
 };
 
-},{}],48:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/lib/browser.js":[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -57751,7 +57753,7 @@ function ws(uri, protocols, opts) {
 
 if (WebSocket) ws.prototype = WebSocket.prototype;
 
-},{}],49:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/has-binary/index.js":[function(require,module,exports){
 (function (global){
 
 /*
@@ -57813,9 +57815,9 @@ function hasBinary(data) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"isarray":50}],50:[function(require,module,exports){
-arguments[4][41][0].apply(exports,arguments)
-},{"dup":41}],51:[function(require,module,exports){
+},{"isarray":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/has-binary/node_modules/isarray/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/has-binary/node_modules/isarray/index.js":[function(require,module,exports){
+arguments[4]["/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/has-binary/node_modules/isarray/index.js"][0].apply(exports,arguments)
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/indexof/index.js":[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -57826,7 +57828,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],52:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/object-component/index.js":[function(require,module,exports){
 
 /**
  * HOP ref.
@@ -57911,7 +57913,7 @@ exports.length = function(obj){
 exports.isEmpty = function(obj){
   return 0 == exports.length(obj);
 };
-},{}],53:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/parseuri/index.js":[function(require,module,exports){
 /**
  * Parses an URI
  *
@@ -57938,7 +57940,7 @@ module.exports = function parseuri(str) {
   return uri;
 };
 
-},{}],54:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/binary.js":[function(require,module,exports){
 (function (global){
 /*global Blob,File*/
 
@@ -58083,7 +58085,7 @@ exports.removeBlobs = function(data, callback) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./is-buffer":56,"isarray":57}],55:[function(require,module,exports){
+},{"./is-buffer":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/is-buffer.js","isarray":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/isarray/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/index.js":[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -58485,7 +58487,7 @@ function error(data){
   };
 }
 
-},{"./binary":54,"./is-buffer":56,"component-emitter":18,"debug":19,"isarray":57,"json3":58}],56:[function(require,module,exports){
+},{"./binary":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/binary.js","./is-buffer":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/is-buffer.js","component-emitter":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/component-emitter/index.js","debug":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/debug/debug.js","isarray":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/isarray/index.js","json3":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/json3/lib/json3.js"}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/is-buffer.js":[function(require,module,exports){
 (function (global){
 
 module.exports = isBuf;
@@ -58502,9 +58504,9 @@ function isBuf(obj) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],57:[function(require,module,exports){
-arguments[4][41][0].apply(exports,arguments)
-},{"dup":41}],58:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/isarray/index.js":[function(require,module,exports){
+arguments[4]["/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/has-binary/node_modules/isarray/index.js"][0].apply(exports,arguments)
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/json3/lib/json3.js":[function(require,module,exports){
 /*! JSON v3.2.6 | http://bestiejs.github.io/json3 | Copyright 2012-2013, Kit Cambridge | http://kit.mit-license.org */
 ;(function (window) {
   // Convenience aliases.
@@ -59367,7 +59369,7 @@ arguments[4][41][0].apply(exports,arguments)
   }
 }(this));
 
-},{}],59:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/node_modules/to-array/index.js":[function(require,module,exports){
 module.exports = toArray
 
 function toArray(list, index) {
@@ -59382,7 +59384,7 @@ function toArray(list, index) {
     return array
 }
 
-},{}],60:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js":[function(require,module,exports){
 // File:src/Three.js
 
 /**
@@ -93928,7 +93930,7 @@ THREE.MorphBlendMesh.prototype.update = function ( delta ) {
 
 };
 
-},{}],61:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/node_modules/tween.js/index.js":[function(require,module,exports){
 /**
  * Tween.js - Licensed under the MIT license
  * https://github.com/sole/tween.js
@@ -94686,161 +94688,7 @@ TWEEN.Interpolation = {
 };
 
 module.exports=TWEEN;
-},{}],62:[function(require,module,exports){
-require('./bootstrap').init();
-},{"./bootstrap":76}],63:[function(require,module,exports){
-var $ = require('jquery');
-require('angular');
-var THREE = require('three');
-var TWEEN = require('tween.js');
-
-require('./dice-model/d4');
-require('./dice-model/d6');
-require('./dice-model/d8');
-require('./dice-model/d20');
-
-module.exports = 'app.directives.dice-model';
-
-angular.module(module.exports, [])
-.directive('diceModel', function () {
-  return {
-    scope: {
-      color: '=?',
-      diceModel: '=?model',
-      value: '=?'
-    },
-    controller: function ($scope, $element, $attrs) {
-      $scope.animating = false;
-    },
-    link: function ($scope, $element, $attrs) {
-
-      var addCamera = function () {
-        $scope.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-        $scope.camera.setLens(35);
-        $scope.camera.position.set(0,0,5);
-      };
-
-      var addLights = function () {
-        var light = new THREE.PointLight(0x808080, 3);
-        light.position.set(0,1,5);
-        $scope.scene.add(light);
-        $scope.scene.add(new THREE.AmbientLight(0x404040));
-      };
-
-      var addModel = function () {
-        $scope.scene.remove($scope.dice);
-
-        $scope.model = require('./dice-model/d' + $scope.diceModel);
-        $scope.dice = $scope.model.createMesh(stringToHex($scope.color));
-        $scope.scene.add($scope.dice);
-
-        window.dice = $scope.dice;
-      };
-
-      var stringToHex = function (string) {
-        string = string.replace('#', '0x');
-        return parseInt(string);
-      };
-
-      var animate = function () {
-        window.requestAnimationFrame(function (time) {
-          TWEEN.update(time);
-          $scope.renderer.render($scope.scene, $scope.camera);
-
-          if($scope.animating === true) {
-            animate();  
-          }
-        });
-      };
-
-      var showSide = function (side) {
-        side = $scope.model.faceAngles[side];
-
-        if (!$scope.animating) {
-          $scope.animating = true;
-          animate();  
-        }
-
-        var tween = new TWEEN.Tween($scope.dice.rotation)
-        .to({
-          x: side.x * (Math.PI/180),
-          y: side.y * (Math.PI/180),
-          z: side.z * (Math.PI/180)
-        }, 1000)
-        .easing(TWEEN.Easing.Cubic.InOut)
-        .onComplete(function () {
-          $scope.animating = false;
-        })
-        .start();
-      };
-
-      $scope.scene = new THREE.Scene();
-      $scope.renderer = new THREE.WebGLRenderer({alpha: true});
-      $scope.renderer.setSize(240, 240);
-
-      
-      addCamera();
-      addLights();
-      addModel();
-
-      $element.append($scope.renderer.domElement);
-      $scope.animating = true;
-      animate();
-
-      // $(window).on('keyup', function (e) {
-      //   switch(e.keyCode){
-      //     case 37: // left
-      //       $scope.dice.rotation.y += 5 * (Math.PI/180);
-      //     break;
-      //     case 39: // right
-      //       $scope.dice.rotation.y -= 5 * (Math.PI/180);
-      //     break;
-      //     case 38: // up
-      //       $scope.dice.rotation.x -= 5 * (Math.PI/180);
-      //     break;
-      //     case 40: // down
-      //       $scope.dice.rotation.x += 5 * (Math.PI/180);
-      //     break;
-      //   }
-
-      //   $scope.dice.rotation.z = 90 * (Math.PI/180);
-
-      //   console.log({
-      //     x: $scope.dice.rotation.x * (180/Math.PI),
-      //     y: $scope.dice.rotation.y * (180/Math.PI),
-      //     z: $scope.dice.rotation.z * (180/Math.PI),
-      //   });
-      // });
-      
-      $scope.$watch('diceModel', function (newValue, oldValue) {
-        if (typeof newValue === 'undefined') {
-          return;
-        }
-
-        addModel();
-        animate();
-      });
-
-      $scope.$watch('color', function (newValue, oldValue) {
-        if (typeof newValue === 'undefined') {
-          return;
-        }
-
-        addModel();
-        animate();
-      });
-
-      $scope.$watch('value', function (newValue, oldValue) {
-        if (typeof newValue === 'undefined') {
-          return;
-        }
-
-        showSide(newValue);
-      });
-    }
-  };
-});
-},{"./dice-model/d20":64,"./dice-model/d4":65,"./dice-model/d6":66,"./dice-model/d8":67,"angular":5,"jquery":6,"three":60,"tween.js":61}],64:[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d20.js":[function(require,module,exports){
 var THREE = require('three');
 
 var modelData = {
@@ -95007,7 +94855,7 @@ var modelData = {
 
 
 module.exports = modelData;
-},{"three":60}],65:[function(require,module,exports){
+},{"three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d4.js":[function(require,module,exports){
 var THREE = require('three');
 
 var modelData = {
@@ -95061,7 +94909,7 @@ var modelData = {
 
 
 module.exports = modelData;
-},{"three":60}],66:[function(require,module,exports){
+},{"three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d6.js":[function(require,module,exports){
 var THREE = require('three');
 
 var modelData = {
@@ -95175,7 +95023,7 @@ var modelData = {
 
 
 module.exports = modelData;
-},{"three":60}],67:[function(require,module,exports){
+},{"three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d8.js":[function(require,module,exports){
 var THREE = require('three');
 
 var modelData = {
@@ -95257,7 +95105,159 @@ var modelData = {
 
 
 module.exports = modelData;
-},{"three":60}],68:[function(require,module,exports){
+},{"three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/dice-model.js":[function(require,module,exports){
+var $ = require('jquery');
+require('angular');
+var THREE = require('three');
+var TWEEN = require('tween.js');
+
+require('./d4');
+require('./d6');
+require('./d8');
+require('./d20');
+
+module.exports = 'app.directives.dice-model';
+
+angular.module(module.exports, [])
+.directive('diceModel', function () {
+  return {
+    scope: {
+      color: '=?',
+      diceModel: '=?model',
+      value: '=?'
+    },
+    controller: function ($scope, $element, $attrs) {
+      $scope.animating = false;
+    },
+    link: function ($scope, $element, $attrs) {
+
+      var addCamera = function () {
+        $scope.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+        $scope.camera.setLens(35);
+        $scope.camera.position.set(0,0,5);
+      };
+
+      var addLights = function () {
+        var light = new THREE.PointLight(0x404040, 3);
+        light.position.set(0,1,5);
+        $scope.scene.add(light);
+        $scope.scene.add(new THREE.AmbientLight(0x202020));
+      };
+
+      var addModel = function () {
+        $scope.scene.remove($scope.dice);
+
+        $scope.model = require('./d' + $scope.diceModel);
+        $scope.dice = $scope.model.createMesh(stringToHex($scope.color));
+        $scope.scene.add($scope.dice);
+
+        window.dice = $scope.dice;
+      };
+
+      var stringToHex = function (string) {
+        string = string.replace('#', '0x');
+        return parseInt(string);
+      };
+
+      var animate = function () {
+        window.requestAnimationFrame(function (time) {
+          TWEEN.update(time);
+          $scope.renderer.render($scope.scene, $scope.camera);
+
+          if($scope.animating === true) {
+            animate();  
+          }
+        });
+      };
+
+      var showSide = function (side) {
+        side = $scope.model.faceAngles[side];
+
+        if (!$scope.animating) {
+          $scope.animating = true;
+          animate();  
+        }
+
+        var tween = new TWEEN.Tween($scope.dice.rotation)
+        .to({
+          x: side.x * (Math.PI/180),
+          y: side.y * (Math.PI/180),
+          z: side.z * (Math.PI/180)
+        }, 1000)
+        .easing(TWEEN.Easing.Cubic.InOut)
+        .onComplete(function () {
+          $scope.animating = false;
+        })
+        .start();
+      };
+
+      $scope.scene = new THREE.Scene();
+      $scope.renderer = new THREE.WebGLRenderer({alpha: true});
+      $scope.renderer.setSize(180, 180);
+
+      
+      addCamera();
+      addLights();
+      addModel();
+
+      $element.append($scope.renderer.domElement);
+      $scope.animating = true;
+      animate();
+
+      // $(window).on('keyup', function (e) {
+      //   switch(e.keyCode){
+      //     case 37: // left
+      //       $scope.dice.rotation.y += 5 * (Math.PI/180);
+      //     break;
+      //     case 39: // right
+      //       $scope.dice.rotation.y -= 5 * (Math.PI/180);
+      //     break;
+      //     case 38: // up
+      //       $scope.dice.rotation.x -= 5 * (Math.PI/180);
+      //     break;
+      //     case 40: // down
+      //       $scope.dice.rotation.x += 5 * (Math.PI/180);
+      //     break;
+      //   }
+
+      //   $scope.dice.rotation.z = 90 * (Math.PI/180);
+
+      //   console.log({
+      //     x: $scope.dice.rotation.x * (180/Math.PI),
+      //     y: $scope.dice.rotation.y * (180/Math.PI),
+      //     z: $scope.dice.rotation.z * (180/Math.PI),
+      //   });
+      // });
+      
+      $scope.$watch('diceModel', function (newValue, oldValue) {
+        if (typeof newValue === 'undefined') {
+          return;
+        }
+
+        addModel();
+        animate();
+      });
+
+      $scope.$watch('color', function (newValue, oldValue) {
+        if (typeof newValue === 'undefined') {
+          return;
+        }
+
+        addModel();
+        animate();
+      });
+
+      $scope.$watch('value', function (newValue, oldValue) {
+        if (typeof newValue === 'undefined') {
+          return;
+        }
+
+        showSide(newValue);
+      });
+    }
+  };
+});
+},{"./d20":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d20.js","./d4":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d4.js","./d6":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d6.js","./d8":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d8.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","jquery":"/Users/Keith/Code/keith/roll-the-dice/node_modules/jquery/dist/jquery.js","three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js","tween.js":"/Users/Keith/Code/keith/roll-the-dice/node_modules/tween.js/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/index.js":[function(require,module,exports){
 var angular = require('angular');
 var _ = require('lodash');
 
@@ -95296,7 +95296,7 @@ angular.module(module.exports, [
 
   $localStorage.clientId = $localStorage.clientId || uuid.v4();
 });
-},{"./services":69,"./shims/ng-storage":72,"./states":73,"angular":5,"angular-ui-router":3,"lodash":7,"node-uuid":9}],69:[function(require,module,exports){
+},{"./services":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/services.js","./shims/ng-storage":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/shims/ng-storage.js","./states":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","angular-ui-router":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular-ui-router/release/angular-ui-router.js","lodash":"/Users/Keith/Code/keith/roll-the-dice/node_modules/lodash/index.js","node-uuid":"/Users/Keith/Code/keith/roll-the-dice/node_modules/node-uuid/uuid.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/services.js":[function(require,module,exports){
 var angular = require('angular');
 
 module.exports = 'app.services';
@@ -95305,7 +95305,7 @@ angular.module('app.services', [
   require('./services/roller'),
   require('./services/groups')
 ]);
-},{"./services/groups":70,"./services/roller":71,"angular":5}],70:[function(require,module,exports){
+},{"./services/groups":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/services/groups.js","./services/roller":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/services/roller.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/services/groups.js":[function(require,module,exports){
 var angular = require('angular');
 var _ = require('lodash');
 
@@ -95319,7 +95319,7 @@ angular.module(module.exports, [
 
   return Groups;
 });
-},{"angular":5,"angular-resource":2,"lodash":7}],71:[function(require,module,exports){
+},{"angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","angular-resource":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular-resource/index.js","lodash":"/Users/Keith/Code/keith/roll-the-dice/node_modules/lodash/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/services/roller.js":[function(require,module,exports){
 var angular = require('angular');
 var _ = require('lodash');
 
@@ -95340,12 +95340,12 @@ angular.module(module.exports, [])
     }
   };
 });
-},{"angular":5,"lodash":7}],72:[function(require,module,exports){
+},{"angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","lodash":"/Users/Keith/Code/keith/roll-the-dice/node_modules/lodash/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/shims/ng-storage.js":[function(require,module,exports){
 module.exports = 'ngStorage';
 
 var angular = require('angular');
 require('ngStorage');
-},{"angular":5,"ngStorage":8}],73:[function(require,module,exports){
+},{"angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","ngStorage":"/Users/Keith/Code/keith/roll-the-dice/node_modules/ng-storage/ngStorage.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states.js":[function(require,module,exports){
 var angular = require('angular');
 
 module.exports = 'app.states';
@@ -95354,14 +95354,14 @@ angular.module('app.states', [
   require('./states/index'),
   require('./states/group/index')
 ]);
-},{"./states/group/index":74,"./states/index":75,"angular":5}],74:[function(require,module,exports){
+},{"./states/group/index":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states/group/index.js","./states/index":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states/index.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states/group/index.js":[function(require,module,exports){
 var angular = require('angular');
 var _ = require('lodash');
 
 module.exports = 'app.states.group';
 
 angular.module(module.exports, [
-  require('../../directives/dice-model')
+  require('../../directives/dice-model/dice-model')
 ])
 .controller('GroupCtrl', function ($localStorage, roller, $scope, $stateParams) {
   var _ = require('lodash');
@@ -95372,7 +95372,7 @@ angular.module(module.exports, [
   $scope.member = {clientId: $scope.clientId};
   $scope.diceToRoll = [];
   $scope.rollValues = [];
-  $scope.diceColor = '#cc0000';
+  $scope.diceColor = $localStorage.diceColor || '#cc0000';
 
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {
@@ -95391,6 +95391,7 @@ angular.module(module.exports, [
       groupId: $stateParams.groupId,
       clientId: $localStorage.clientId,
       clientName: $localStorage.clientName,
+      diceColor: $localStorage.diceColor
     });
   };
 
@@ -95413,6 +95414,14 @@ angular.module(module.exports, [
     $scope.diceToRoll = [];
   };
 
+  $scope.$watch('diceColor', function (newValue, oldValue) {
+    if (typeof newValue === 'undefined') {
+      return;
+    }
+    $localStorage.diceColor = newValue;
+    joinGroup();
+  });
+
   $scope.roll = function () {
     $scope.rollValues = [];
 
@@ -95427,7 +95436,7 @@ angular.module(module.exports, [
     });
   };
 });
-},{"../../directives/dice-model":63,"angular":5,"lodash":7,"socket.io-client":10}],75:[function(require,module,exports){
+},{"../../directives/dice-model/dice-model":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/dice-model.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","lodash":"/Users/Keith/Code/keith/roll-the-dice/node_modules/lodash/index.js","socket.io-client":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states/index.js":[function(require,module,exports){
 var angular = require('angular');
 
 module.exports = 'app.states.index';
@@ -95454,7 +95463,7 @@ angular.module(module.exports, [])
     });
   };
 });
-},{"angular":5}],76:[function(require,module,exports){
+},{"angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/bootstrap.js":[function(require,module,exports){
 var angular = require('angular');
 
 module.exports = {
@@ -95462,4 +95471,6 @@ module.exports = {
     angular.bootstrap(document, [require('./app/index')]);
   }
 };
-},{"./app/index":68,"angular":5}]},{},[62]);
+},{"./app/index":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/index.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js"}]},{},["./public/src/js/app.js"]);
+
+//# sourceMappingURL=app.bundled.js.map
