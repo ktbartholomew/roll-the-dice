@@ -13,10 +13,12 @@
     "gulp-for-compass": "^0.0.2",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-util": "^3.0.4",
+    "hiredis": "^0.2.0",
     "jquery": "^2.1.3",
     "lodash": "^3.5.0",
     "node-uuid": "^1.4.3",
     "q": "^1.2.0",
+    "redis": "^0.12.1",
     "socket.io": "^1.3.5",
     "socket.io-client": "^1.3.5",
     "three": "^0.70.0",
@@ -26,7 +28,8 @@
     "watchify": "^2.4.0"
   },
   "scripts": {
-    "start": "browserify public/src/js/app.js -o public/src/js/app.bundled.js -t browserify-shim; node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "devDependencies": {},
   "browser": {
@@ -39,10 +42,6 @@
   },
   "browserify-shim": {
     "ngStorage": "ngStorage"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
   },
   "author": "",
   "license": "MIT"
