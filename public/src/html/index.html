@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="" class="control-label">Enter a group ID:</label>
+          <form class="form-inline" data-ng-class="{'has-error': joinGroupError}">
+            <input type="text" class="form-control" data-ng-model="groupId">
+            <button type="submit" class="btn btn-primary" data-ng-click="joinGroup(groupId)">Join</button>
+          </form>
+        </div>
+        <div class="form-group">
+          <em>or</em>
+        </div>
+        <div class="form-group">
+          <a href="" class="btn btn-success" data-ng-click="createGroup()">Create New Group</a>  
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
