@@ -94688,7 +94688,126 @@ TWEEN.Interpolation = {
 };
 
 module.exports=TWEEN;
-},{}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d20.js":[function(require,module,exports){
+},{}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d10.js":[function(require,module,exports){
+var THREE = require('three');
+window.THREE = THREE;
+
+var modelData = {
+  createMesh: function (color) {
+    var vertices = [
+      0,0.866,0,
+      Math.sin(Math.PI * 0), 0, Math.cos(Math.PI * 0),
+      Math.sin(Math.PI * 0.4), 0, Math.cos(Math.PI * 0.4),
+      Math.sin(Math.PI * 0.8), 0, Math.cos(Math.PI * 0.8),
+      Math.sin(Math.PI * 1.2), 0, Math.cos(Math.PI * 1.2),
+      Math.sin(Math.PI * 1.6), 0, Math.cos(Math.PI * 1.6),
+      Math.sin(Math.PI * 2), 0, Math.cos(Math.PI * 2),
+      0, -0.866, 0
+    ];
+    
+    var indices = [
+      0,1,2,
+      0,2,3,
+      0,3,4,
+      0,4,5,
+      0,5,6,
+      2,1,7,
+      3,2,7,
+      4,3,7,
+      5,4,7,
+      6,5,7
+    ];
+    var geometry = new THREE.PolyhedronGeometry(vertices, indices, 1, 0);
+    geometry.faceVertexUvs[0][0] = modelData.Uvs.d1; // 10
+    geometry.faceVertexUvs[0][1] = modelData.Uvs.d7; // 8
+    geometry.faceVertexUvs[0][2] = modelData.Uvs.d3; // 20
+    geometry.faceVertexUvs[0][3] = modelData.Uvs.d5; // 2
+    geometry.faceVertexUvs[0][4] = modelData.Uvs.d9; // 12
+    geometry.faceVertexUvs[0][5] = modelData.Uvs.d8; // 16
+    geometry.faceVertexUvs[0][6] = modelData.Uvs.d2; // 17
+    geometry.faceVertexUvs[0][7] = modelData.Uvs.d6; // 15
+    geometry.faceVertexUvs[0][8] = modelData.Uvs.d4; // 18
+    geometry.faceVertexUvs[0][9] = modelData.Uvs.d10; // 14
+
+    return new THREE.Mesh(
+      geometry,
+      new THREE.MeshLambertMaterial({
+        color: color,
+        shading: THREE.FlatShading,
+        alphaMap: THREE.ImageUtils.loadTexture('/src/models/d10.png'),
+        // wireframe: true
+      })
+    );
+  },
+  faceAngles: {
+    1: {x: 24, y: 324, z: 0},
+    2: {x: 204, y: 72, z: 0},
+    3: {x: 24, y: 180, z: 0},
+    4: {x: 204, y: 288, z: 0},
+    5: {x: 24, y: 108, z: 0},
+    6: {x: 204, y: 0, z: 0},
+    7: {x: 24, y: 252, z: 0},
+    8: {x: 204, y: 144, z: 0},
+    9: {x: 24, y: 324, z: 0},
+    10: {x: 204, y: 216, z: 0}
+  },
+  Uvs: {
+    d1: [
+      new THREE.Vector2(0/256, 1 - 64/256),
+      new THREE.Vector2(60/256, 1 - 64/256),
+      new THREE.Vector2(30/256, 1 - 0/256)
+    ],
+    d2: [
+      new THREE.Vector2(120/256, 1 - 64/256),
+      new THREE.Vector2(90/256, 1 - 0/256),
+      new THREE.Vector2(60/256, 1 - 64/256)
+    ],
+    d3: [
+      new THREE.Vector2(120/256, 1 - 64/256),
+      new THREE.Vector2(180/256, 1 - 64/256),
+      new THREE.Vector2(150/256, 1 - 0/256)
+    ],
+    d4: [
+      new THREE.Vector2(240/256, 1 - 64/256),
+      new THREE.Vector2(210/256, 1 - 0/256),
+      new THREE.Vector2(180/256, 1 - 64/256)
+    ],
+    d5: [
+      new THREE.Vector2(240/256, 1 - 64/256),
+      new THREE.Vector2(180/256, 1 - 64/256),
+      new THREE.Vector2(210/256, 1 - 128/256)
+    ],
+    d6: [
+      new THREE.Vector2(120/256, 1 - 64/256),
+      new THREE.Vector2(150/256, 1 - 128/256),
+      new THREE.Vector2(180/256, 1 - 64/256)
+    ],
+    d7: [
+      new THREE.Vector2(120/256, 1 - 64/256),
+      new THREE.Vector2(60/256, 1 - 64/256),
+      new THREE.Vector2(90/256, 1 - 128/256)
+    ],
+    d8: [
+      new THREE.Vector2(0/256, 1 - 64/256),
+      new THREE.Vector2(30/256, 1 - 128/256),
+      new THREE.Vector2(60/256, 1 - 64/256)
+    ],
+    d9: [
+      new THREE.Vector2(30/256, 1 - 128/256),
+      new THREE.Vector2(90/256, 1 - 128/256),
+      new THREE.Vector2(60/256, 1 - 64/256)
+    ],
+    d10: [
+      new THREE.Vector2(150/256, 1 - 128/256),
+      new THREE.Vector2(120/256, 1 - 64/256),
+      new THREE.Vector2(90/256, 1 - 128/256)
+    ],
+  }
+};
+
+
+module.exports = modelData;
+},{"three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d20.js":[function(require,module,exports){
 var THREE = require('three');
 
 var modelData = {
@@ -95114,6 +95233,7 @@ var TWEEN = require('tween.js');
 require('./d4');
 require('./d6');
 require('./d8');
+require('./d10');
 require('./d20');
 
 module.exports = 'app.directives.dice-model';
@@ -95190,9 +95310,9 @@ angular.module(module.exports, [])
 
         new TWEEN.Tween($scope.dice.rotation)
         .to({
-          x: side.x * (Math.PI/180),
-          y: side.y * (Math.PI/180),
-          z: side.z * (Math.PI/180)
+          x: THREE.Math.degToRad(side.x),
+          y: THREE.Math.degToRad(side.y),
+          z: THREE.Math.degToRad(side.z)
         }, 500)
         .delay(500)
         .easing(TWEEN.Easing.Cubic.Out)
@@ -95215,30 +95335,30 @@ angular.module(module.exports, [])
       $scope.animating = true;
       animate();
 
-      // $(window).on('keyup', function (e) {
-      //   switch(e.keyCode){
-      //     case 37: // left
-      //       $scope.dice.rotation.y += 5 * (Math.PI/180);
-      //     break;
-      //     case 39: // right
-      //       $scope.dice.rotation.y -= 5 * (Math.PI/180);
-      //     break;
-      //     case 38: // up
-      //       $scope.dice.rotation.x -= 5 * (Math.PI/180);
-      //     break;
-      //     case 40: // down
-      //       $scope.dice.rotation.x += 5 * (Math.PI/180);
-      //     break;
-      //   }
+      $(window).on('keyup', function (e) {
+        switch(e.keyCode){
+          case 37: // left
+            $scope.dice.rotation.y += THREE.Math.degToRad(6);
+          break;
+          case 39: // right
+            $scope.dice.rotation.y -= THREE.Math.degToRad(6);
+          break;
+          case 38: // up
+            $scope.dice.rotation.x -= THREE.Math.degToRad(6);
+          break;
+          case 40: // down
+            $scope.dice.rotation.x += THREE.Math.degToRad(6);
+          break;
+        }
 
-      //   $scope.dice.rotation.z = 90 * (Math.PI/180);
+        // $scope.dice.rotation.z = 90 * (Math.PI/180);
 
-      //   console.log({
-      //     x: $scope.dice.rotation.x * (180/Math.PI),
-      //     y: $scope.dice.rotation.y * (180/Math.PI),
-      //     z: $scope.dice.rotation.z * (180/Math.PI),
-      //   });
-      // });
+        console.log({
+          x: $scope.dice.rotation.x * (180/Math.PI),
+          y: $scope.dice.rotation.y * (180/Math.PI),
+          z: $scope.dice.rotation.z * (180/Math.PI),
+        });
+      });
       
       $scope.$watch('diceModel', function (newValue, oldValue) {
         if (typeof newValue === 'undefined') {
@@ -95268,7 +95388,7 @@ angular.module(module.exports, [])
     }
   };
 });
-},{"./d20":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d20.js","./d4":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d4.js","./d6":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d6.js","./d8":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d8.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","jquery":"/Users/Keith/Code/keith/roll-the-dice/node_modules/jquery/dist/jquery.js","three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js","tween.js":"/Users/Keith/Code/keith/roll-the-dice/node_modules/tween.js/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/index.js":[function(require,module,exports){
+},{"./d10":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d10.js","./d20":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d20.js","./d4":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d4.js","./d6":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d6.js","./d8":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/d8.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","jquery":"/Users/Keith/Code/keith/roll-the-dice/node_modules/jquery/dist/jquery.js","three":"/Users/Keith/Code/keith/roll-the-dice/node_modules/three/three.js","tween.js":"/Users/Keith/Code/keith/roll-the-dice/node_modules/tween.js/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/index.js":[function(require,module,exports){
 var angular = require('angular');
 var _ = require('lodash');
 
@@ -95384,6 +95504,8 @@ angular.module(module.exports, [
   $scope.diceToRoll = [];
   $scope.rollValues = [];
   $scope.diceColor = $localStorage.diceColor || '#cc0000';
+
+  $scope.diceModel = '10';
 
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {

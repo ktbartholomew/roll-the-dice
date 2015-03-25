@@ -6,6 +6,7 @@ var TWEEN = require('tween.js');
 require('./d4');
 require('./d6');
 require('./d8');
+require('./d10');
 require('./d20');
 
 module.exports = 'app.directives.dice-model';
@@ -82,9 +83,9 @@ angular.module(module.exports, [])
 
         new TWEEN.Tween($scope.dice.rotation)
         .to({
-          x: side.x * (Math.PI/180),
-          y: side.y * (Math.PI/180),
-          z: side.z * (Math.PI/180)
+          x: THREE.Math.degToRad(side.x),
+          y: THREE.Math.degToRad(side.y),
+          z: THREE.Math.degToRad(side.z)
         }, 500)
         .delay(500)
         .easing(TWEEN.Easing.Cubic.Out)
@@ -107,30 +108,30 @@ angular.module(module.exports, [])
       $scope.animating = true;
       animate();
 
-      // $(window).on('keyup', function (e) {
-      //   switch(e.keyCode){
-      //     case 37: // left
-      //       $scope.dice.rotation.y += 5 * (Math.PI/180);
-      //     break;
-      //     case 39: // right
-      //       $scope.dice.rotation.y -= 5 * (Math.PI/180);
-      //     break;
-      //     case 38: // up
-      //       $scope.dice.rotation.x -= 5 * (Math.PI/180);
-      //     break;
-      //     case 40: // down
-      //       $scope.dice.rotation.x += 5 * (Math.PI/180);
-      //     break;
-      //   }
+      $(window).on('keyup', function (e) {
+        switch(e.keyCode){
+          case 37: // left
+            $scope.dice.rotation.y += THREE.Math.degToRad(6);
+          break;
+          case 39: // right
+            $scope.dice.rotation.y -= THREE.Math.degToRad(6);
+          break;
+          case 38: // up
+            $scope.dice.rotation.x -= THREE.Math.degToRad(6);
+          break;
+          case 40: // down
+            $scope.dice.rotation.x += THREE.Math.degToRad(6);
+          break;
+        }
 
-      //   $scope.dice.rotation.z = 90 * (Math.PI/180);
+        // $scope.dice.rotation.z = 90 * (Math.PI/180);
 
-      //   console.log({
-      //     x: $scope.dice.rotation.x * (180/Math.PI),
-      //     y: $scope.dice.rotation.y * (180/Math.PI),
-      //     z: $scope.dice.rotation.z * (180/Math.PI),
-      //   });
-      // });
+        console.log({
+          x: $scope.dice.rotation.x * (180/Math.PI),
+          y: $scope.dice.rotation.y * (180/Math.PI),
+          z: $scope.dice.rotation.z * (180/Math.PI),
+        });
+      });
       
       $scope.$watch('diceModel', function (newValue, oldValue) {
         if (typeof newValue === 'undefined') {

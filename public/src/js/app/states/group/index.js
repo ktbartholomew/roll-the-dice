@@ -17,6 +17,8 @@ angular.module(module.exports, [
   $scope.rollValues = [];
   $scope.diceColor = $localStorage.diceColor || '#cc0000';
 
+  $scope.diceModel = '10';
+
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {
       $scope.members = data;
