@@ -95244,7 +95244,8 @@ angular.module(module.exports, [])
     scope: {
       color: '=?',
       diceModel: '=?model',
-      value: '=?'
+      value: '=?',
+      rollTime: '=?'
     },
     controller: function ($scope, $element, $attrs) {
       $scope.animating = false;
@@ -95306,20 +95307,20 @@ angular.module(module.exports, [])
           z: 2 * Math.PI
         }, 500)
         .easing(TWEEN.Easing.Cubic.In)
-        .start();
-
-        new TWEEN.Tween($scope.dice.rotation)
-        .to({
-          x: THREE.Math.degToRad(side.x),
-          y: THREE.Math.degToRad(side.y),
-          z: THREE.Math.degToRad(side.z)
-        }, 500)
-        .delay(500)
-        .easing(TWEEN.Easing.Cubic.Out)
+        .start()
         .onComplete(function () {
-          $scope.animating = false;
-        })
-        .start();
+          new TWEEN.Tween($scope.dice.rotation)
+          .to({
+            x: THREE.Math.degToRad(side.x),
+            y: THREE.Math.degToRad(side.y),
+            z: THREE.Math.degToRad(side.z)
+          }, 500)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .onComplete(function () {
+            $scope.animating = false;
+          })
+          .start();
+        });
       };
 
       $scope.scene = new THREE.Scene();
@@ -95335,30 +95336,32 @@ angular.module(module.exports, [])
       $scope.animating = true;
       animate();
 
-      $(window).on('keyup', function (e) {
-        switch(e.keyCode){
-          case 37: // left
-            $scope.dice.rotation.y += THREE.Math.degToRad(6);
-          break;
-          case 39: // right
-            $scope.dice.rotation.y -= THREE.Math.degToRad(6);
-          break;
-          case 38: // up
-            $scope.dice.rotation.x -= THREE.Math.degToRad(6);
-          break;
-          case 40: // down
-            $scope.dice.rotation.x += THREE.Math.degToRad(6);
-          break;
-        }
+      if ($scope.debug === true) {
+        $(window).on('keyup', function (e) {
+          switch(e.keyCode){
+            case 37: // left
+              $scope.dice.rotation.y += THREE.Math.degToRad(6);
+            break;
+            case 39: // right
+              $scope.dice.rotation.y -= THREE.Math.degToRad(6);
+            break;
+            case 38: // up
+              $scope.dice.rotation.x -= THREE.Math.degToRad(6);
+            break;
+            case 40: // down
+              $scope.dice.rotation.x += THREE.Math.degToRad(6);
+            break;
+          }
 
-        // $scope.dice.rotation.z = 90 * (Math.PI/180);
+          // $scope.dice.rotation.z = 90 * (Math.PI/180);
 
-        console.log({
-          x: $scope.dice.rotation.x * (180/Math.PI),
-          y: $scope.dice.rotation.y * (180/Math.PI),
-          z: $scope.dice.rotation.z * (180/Math.PI),
+          console.log({
+            x: $scope.dice.rotation.x * (180/Math.PI),
+            y: $scope.dice.rotation.y * (180/Math.PI),
+            z: $scope.dice.rotation.z * (180/Math.PI),
+          });
         });
-      });
+      }
       
       $scope.$watch('diceModel', function (newValue, oldValue) {
         if (typeof newValue === 'undefined') {
@@ -95384,6 +95387,14 @@ angular.module(module.exports, [])
         }
 
         showSide(newValue);
+      });
+
+      $scope.$watch('rollTime', function (newValue, oldValue) {
+        if (typeof newValue === 'undefined') {
+          return;
+        }
+        console.log(newValue);
+        showSide($scope.value);
       });
     }
   };
@@ -95494,7 +95505,7 @@ module.exports = 'app.states.group';
 angular.module(module.exports, [
   require('../../directives/dice-model/dice-model')
 ])
-.controller('GroupCtrl', function ($localStorage, roller, $scope, $stateParams) {
+.controller('GroupCtrl', function ($localStorage, roller, $scope, $stateParams, $timeout) {
   var _ = require('lodash');
   var socket = require('socket.io-client')();
 
@@ -95502,10 +95513,12 @@ angular.module(module.exports, [
   $scope.members = [];
   $scope.member = {clientId: $scope.clientId};
   $scope.diceToRoll = [];
-  $scope.rollValues = [];
   $scope.diceColor = $localStorage.diceColor || '#cc0000';
-
-  $scope.diceModel = '10';
+  $scope.roll = {
+    disabled: false,
+    time: new Date(),
+    values: [],
+  };
 
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {
@@ -95556,7 +95569,9 @@ angular.module(module.exports, [
   });
 
   $scope.roll = function () {
-    $scope.rollValues = [];
+    $scope.roll.time = new Date();
+    $scope.roll.disabled = true;
+    $scope.roll.values = [];
 
     socket.emit('groups:roll', {
       groupId: $stateParams.groupId,
@@ -95565,8 +95580,12 @@ angular.module(module.exports, [
     });
 
     _.forEach($scope.diceToRoll, function (die) {
-      $scope.rollValues.push(roller.roll(die));
+      $scope.roll.values.push(roller.roll(die));
     });
+
+    $timeout(function () {
+      $scope.roll.disabled = false;
+    }, 1500)
   };
 });
 },{"../../directives/dice-model/dice-model":"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/directives/dice-model/dice-model.js","angular":"/Users/Keith/Code/keith/roll-the-dice/node_modules/angular/index.js","lodash":"/Users/Keith/Code/keith/roll-the-dice/node_modules/lodash/index.js","socket.io-client":"/Users/Keith/Code/keith/roll-the-dice/node_modules/socket.io-client/index.js"}],"/Users/Keith/Code/keith/roll-the-dice/public/src/js/app/states/index.js":[function(require,module,exports){

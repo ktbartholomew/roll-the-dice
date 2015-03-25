@@ -6,7 +6,7 @@ module.exports = 'app.states.group';
 angular.module(module.exports, [
   require('../../directives/dice-model/dice-model')
 ])
-.controller('GroupCtrl', function ($localStorage, roller, $scope, $stateParams) {
+.controller('GroupCtrl', function ($localStorage, roller, $scope, $stateParams, $timeout) {
   var _ = require('lodash');
   var socket = require('socket.io-client')();
 
@@ -14,10 +14,12 @@ angular.module(module.exports, [
   $scope.members = [];
   $scope.member = {clientId: $scope.clientId};
   $scope.diceToRoll = [];
-  $scope.rollValues = [];
   $scope.diceColor = $localStorage.diceColor || '#cc0000';
-
-  $scope.diceModel = '10';
+  $scope.roll = {
+    disabled: false,
+    time: new Date(),
+    values: [],
+  };
 
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {
@@ -68,7 +70,9 @@ angular.module(module.exports, [
   });
 
   $scope.roll = function () {
-    $scope.rollValues = [];
+    $scope.roll.time = new Date();
+    $scope.roll.disabled = true;
+    $scope.roll.values = [];
 
     socket.emit('groups:roll', {
       groupId: $stateParams.groupId,
@@ -77,7 +81,11 @@ angular.module(module.exports, [
     });
 
     _.forEach($scope.diceToRoll, function (die) {
-      $scope.rollValues.push(roller.roll(die));
+      $scope.roll.values.push(roller.roll(die));
     });
+
+    $timeout(function () {
+      $scope.roll.disabled = false;
+    }, 1500)
   };
 });

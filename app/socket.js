@@ -92,6 +92,10 @@ module.exports = function (io) {
     });
 
     socket.on('disconnect', function () {
+      if(typeof socketData.clientId === 'undefined') {
+        return;
+      }
+      
       console.log('Client %s left.', socketData.clientId);
 
       Q.ninvoke(redis, 'get', 'groups')

@@ -17,7 +17,8 @@ angular.module(module.exports, [])
     scope: {
       color: '=?',
       diceModel: '=?model',
-      value: '=?'
+      value: '=?',
+      rollTime: '=?'
     },
     controller: function ($scope, $element, $attrs) {
       $scope.animating = false;
@@ -79,20 +80,20 @@ angular.module(module.exports, [])
           z: 2 * Math.PI
         }, 500)
         .easing(TWEEN.Easing.Cubic.In)
-        .start();
-
-        new TWEEN.Tween($scope.dice.rotation)
-        .to({
-          x: THREE.Math.degToRad(side.x),
-          y: THREE.Math.degToRad(side.y),
-          z: THREE.Math.degToRad(side.z)
-        }, 500)
-        .delay(500)
-        .easing(TWEEN.Easing.Cubic.Out)
+        .start()
         .onComplete(function () {
-          $scope.animating = false;
-        })
-        .start();
+          new TWEEN.Tween($scope.dice.rotation)
+          .to({
+            x: THREE.Math.degToRad(side.x),
+            y: THREE.Math.degToRad(side.y),
+            z: THREE.Math.degToRad(side.z)
+          }, 500)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .onComplete(function () {
+            $scope.animating = false;
+          })
+          .start();
+        });
       };
 
       $scope.scene = new THREE.Scene();
@@ -108,30 +109,32 @@ angular.module(module.exports, [])
       $scope.animating = true;
       animate();
 
-      $(window).on('keyup', function (e) {
-        switch(e.keyCode){
-          case 37: // left
-            $scope.dice.rotation.y += THREE.Math.degToRad(6);
-          break;
-          case 39: // right
-            $scope.dice.rotation.y -= THREE.Math.degToRad(6);
-          break;
-          case 38: // up
-            $scope.dice.rotation.x -= THREE.Math.degToRad(6);
-          break;
-          case 40: // down
-            $scope.dice.rotation.x += THREE.Math.degToRad(6);
-          break;
-        }
+      if ($scope.debug === true) {
+        $(window).on('keyup', function (e) {
+          switch(e.keyCode){
+            case 37: // left
+              $scope.dice.rotation.y += THREE.Math.degToRad(6);
+            break;
+            case 39: // right
+              $scope.dice.rotation.y -= THREE.Math.degToRad(6);
+            break;
+            case 38: // up
+              $scope.dice.rotation.x -= THREE.Math.degToRad(6);
+            break;
+            case 40: // down
+              $scope.dice.rotation.x += THREE.Math.degToRad(6);
+            break;
+          }
 
-        // $scope.dice.rotation.z = 90 * (Math.PI/180);
+          // $scope.dice.rotation.z = 90 * (Math.PI/180);
 
-        console.log({
-          x: $scope.dice.rotation.x * (180/Math.PI),
-          y: $scope.dice.rotation.y * (180/Math.PI),
-          z: $scope.dice.rotation.z * (180/Math.PI),
+          console.log({
+            x: $scope.dice.rotation.x * (180/Math.PI),
+            y: $scope.dice.rotation.y * (180/Math.PI),
+            z: $scope.dice.rotation.z * (180/Math.PI),
+          });
         });
-      });
+      }
       
       $scope.$watch('diceModel', function (newValue, oldValue) {
         if (typeof newValue === 'undefined') {
@@ -157,6 +160,14 @@ angular.module(module.exports, [])
         }
 
         showSide(newValue);
+      });
+
+      $scope.$watch('rollTime', function (newValue, oldValue) {
+        if (typeof newValue === 'undefined') {
+          return;
+        }
+        console.log(newValue);
+        showSide($scope.value);
       });
     }
   };
