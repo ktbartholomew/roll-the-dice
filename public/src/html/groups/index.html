@@ -29,19 +29,25 @@
   </div>
   <div class="col-xs-8">
     <h3>Players</h3>
-    <ul>
-      <li data-ng-repeat="member in members track by $index">
-        <span>{{ member.clientName || 'Anonymous Player' }}</span>
-        <span data-ng-if="member.clientId == clientId">
-          <a href="" data-ng-click="setClientName()">
-            <span data-ng-if="!member.clientName">Set your name</span>
-            <span data-ng-if="member.clientName">Change</span>
-          </a>
-        </span> <br>
-        <span data-ng-repeat="memberRoll in member.rolls track by $index">
-          <div data-dice-model data-roll-time="roll.time" data-color="member.diceColor" data-model="memberRoll.die" data-value="memberRoll.value"></div>
+    <div data-ng-repeat="member in members track by $index">
+      <h4>{{ member.clientName || 'Anonymous Player' }}</h4>
+      <span data-ng-if="member.clientId == clientId">
+        <a href="" data-ng-click="setClientName()">
+          <span data-ng-if="!member.clientName">Set your name</span>
+          <span data-ng-if="member.clientName">Change name</span>
+        </a>
+      </span> <br>
+      <div>
+        <span data-ng-if="member.rollStats.dc !== null">
+          <strong>Difficulty Throw: </strong>{{ member.rollStats.dc }}
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span data-ng-if="member.rollStats.sum">
+          <strong>Sum: </strong>{{ member.rollStats.sum }}
         </span>
-      </li>
-    </ul>
+      </div>
+      <span data-ng-repeat="memberRoll in member.rolls track by $index">
+        <div data-dice-model data-roll-time="roll.time" data-color="member.diceColor" data-model="memberRoll.die" data-value="memberRoll.value"></div>
+      </span>
+    </div>
   </div>
 </div>

@@ -95522,13 +95522,7 @@ angular.module(module.exports, [
 
   socket.on('groups:update:members', function (data) {
     $scope.$apply(function () {
-      $scope.members = data;
-    });
-  });
-
-  socket.on('groups:update:rolls', function (data) {
-    $scope.$apply(function () {
-
+      $scope.members = getRollStats(data);
     });
   });
 
@@ -95540,6 +95534,19 @@ angular.module(module.exports, [
       diceColor: $localStorage.diceColor
     });
   };
+
+  var getRollStats = function (data) {
+    _.forEach(data, function (member, index, array) {
+      array[index].rollStats = {
+        dc: (_.find(member.rolls, {die: 20})) ?
+          _.find(member.rolls, {die: 20}).value :
+          null,
+        sum: _.sum(_.map(member.rolls, 'value'))
+      };
+    });
+
+    return data;
+  }
 
   joinGroup();
 
